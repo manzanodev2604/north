@@ -1,5 +1,5 @@
 // Red primero; sin conexión, la última copia guardada. Solo archivos propios (las fotos de tiendas no).
-const C = 'pauta-v1';
+const C = 'north-v1';
 self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(C).then(c => c.addAll(['./', 'manifest.webmanifest', 'icon-192.png']))); });
 self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
 self.addEventListener('fetch', e => {
